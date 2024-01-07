@@ -2,8 +2,7 @@
 Parsing your e-statement from Jago Syariah app into CSV. Inspired from https://startkit.tech/bank-statement-converter but running locally.
 
 ## Diagram
-![Screenshot 2024-01-07 at 12 11 09](https://github.com/irfanhkm/jago-syariah-statement-parser/assets/30617181/c3b1ea01-cb2f-442b-891c-6c030ab0958c)
-
+![Screenshot 2024-01-07 at 12 30 35](https://github.com/irfanhkm/jago-syariah-statement-parser/assets/30617181/933f7482-1485-4f87-8df8-5c7a7174e378)
 
 ### Example:
 - input:
