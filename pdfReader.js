@@ -49,7 +49,7 @@ function transformLines(lines) {
         return [
             dateTime, // datetime
             lines[2] + " " + lines[3], // receiver account
-            lines[indexAmount].replace(/\./g, ''), // amount
+            lines[indexAmount].replace(/[+.]/g, ''), // amount
             lines.slice(4, indexAmount).join(" "), // remark
         ];
     }
