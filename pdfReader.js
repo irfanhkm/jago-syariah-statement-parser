@@ -2,7 +2,7 @@ import fs from 'fs';
 import PdfParse from 'pdf-parse';
 import moment from 'moment';
 
-export default async function generateCdvFromPdf(fileName) {
+export default async function generateCdvFromPdf(fileName, logFileName) {
     try {
         const rawfileName = fileName.replace(".pdf", "");
         const dataBuffer = fs.readFileSync(`./input/${rawfileName}.pdf`);
@@ -13,6 +13,8 @@ export default async function generateCdvFromPdf(fileName) {
         const textInArray = processPdfData(data.text);
 
         fs.writeFileSync(`./output/${rawfileName}.csv`, textInArray.join('\n'));
+        fs.appendFileSync(logFileName, fileName + "\n");
+        console.log(`success save: ./output/${rawfileName}.csv`);
         return true;
     } catch(error) {
         console.error(`error file: ${fileName}, error: ${error}`)
@@ -47,8 +49,8 @@ function transformLines(lines) {
         return [
             dateTime, // datetime
             lines[2] + " " + lines[3], // receiver account
-            lines[indexMinus].replace(/\./g, ''), // amount
-            lines.slice(4, indexMinus).join(" "), // remark
+            lines[indexAmount].replace(/\./g, ''), // amount
+            lines.slice(4, indexAmount).join(" "), // remark
         ];
     }
 
