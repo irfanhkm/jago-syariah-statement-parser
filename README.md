@@ -1,3 +1,6 @@
+## Description
+Parsing your e-statement from Jago Syariah app into CSV. Inspired from https://startkit.tech/bank-statement-converter but running locally.
+
 ## Diagram
 ![Screenshot 2024-01-07 at 12 11 09](https://github.com/irfanhkm/jago-syariah-statement-parser/assets/30617181/c3b1ea01-cb2f-442b-891c-6c030ab0958c)
 
@@ -12,9 +15,9 @@
 
 ### How to use it
 1. Clone the project, install dependencies
-2. Put your pdf file statement to the input folder
+2. Put your pdf file statement into the input folder
 3. Run the project.
 
 
-### How to export statement from jago app
+### How to export statements from Jago App Syariah
 Follow this instruction: https://www.jago.com/id/syariah/support/faq/menggunakan-jago/kantong/download-e-statement-dan-riwayat-transaksi
