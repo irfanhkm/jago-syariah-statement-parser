@@ -3,6 +3,7 @@ import PdfParse from 'pdf-parse';
 import moment from 'moment';
 
 export default async function generateCdvFromPdf(fileName, logFileName) {
+    console.log(fileName);
     try {
         const rawfileName = fileName.replace(".pdf", "");
         const dataBuffer = fs.readFileSync(`./input/${rawfileName}.pdf`);
