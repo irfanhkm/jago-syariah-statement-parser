@@ -32,15 +32,23 @@ function processPdfData(textData) {
     for (let i = startPage + 1; i < lineArray.length; i++) {
         const currentDate = lineArray[i];
         if (isValidDateFormat(currentDate)) {
-            const transformedLines = transformLines(lineArray.slice(i, i + 15));
+            const rawData = lineArray.slice(i, i + 15);
+            if (bannedWords.filter(x => !rawData.includes(x)).length == 0) {
+                continue;
+            }
+            const transformedLines = transformLines(rawData);
             if (transformedLines) {
                 finalArr.push(transformedLines.join(csvIdentifier));
+            } else {
+                console.error(`Failed parsed this data: ${rawData}`);
             }
-        }
+        } 
     }
 
     return finalArr;
 }
+
+const bannedWords = ['Previous Balance', 'Total Incoming', 'Total Outgoing', 'Closing Balance', 'Source/Destination', 'Transaction Details']
 
 function transformLines(lines) {
     const regexAmount = /^[+-]\d+$/; // checking expense or income identifier
