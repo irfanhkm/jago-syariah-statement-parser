@@ -12,10 +12,16 @@ Parsing your e-statement from Jago Syariah app into CSV. Inspired from https://s
     2023-02-09T07:46:00+07:00~IRFAN HAKIM GoPay 08133xxxxxxx~-200000~Outgoing Transfer ID# 18973xxxx
     ```
 
+### Prequisite
+- Install node js: [mac](https://nodejs.org/en/download/package-manager/all#macos), [windows](https://nodejs.org/en/download/package-manager/all#windows-1)
+- Install yarn: [mac]https://formulae.brew.sh/formula/yarn
+
 ### How to use it
-1. Clone the project, install dependencies
-2. Put your pdf file statement into the input folder
-3. Run the project.
+1. Clone the project, run installation
+   a. run command `yarn install`
+3. Put your pdf file statement into the input folder
+4. Run the project.
+   a. run command `yarn start`
 
 
 ### How to export statements from Jago App Syariah
