@@ -17,8 +17,9 @@ Parsing your e-statement from Jago Syariah app into CSV. Inspired from https://s
 - Install yarn: [mac]https://formulae.brew.sh/formula/yarn
 
 ### How to use it
-1. Clone the project, run installation
-   a. run command `yarn install`
+1. Clone the project and run installation
+   a. run command `git clone https://github.com/irfanhkm/jago-syariah-statement-parser.git` (clone project using git)
+   b. run command `yarn install` (installation)
 3. Put your pdf file statement into the input folder
 4. Run the project.
    a. run command `yarn start`
