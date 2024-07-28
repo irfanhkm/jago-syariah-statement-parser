@@ -13,6 +13,7 @@ Parsing your e-statement from Jago Syariah app into CSV. Inspired from https://s
     ```
 
 ### Prequisite
+- Install git [mac] https://formulae.brew.sh/formula/git
 - Install node js: [mac](https://nodejs.org/en/download/package-manager/all#macos), [windows](https://nodejs.org/en/download/package-manager/all#windows-1)
 - Install yarn: [mac]https://formulae.brew.sh/formula/yarn
 
