@@ -1,5 +1,5 @@
 import fs from 'fs';
-import PdfParse from 'pdf-parse';
+import PDF from "pdf-parse/lib/pdf-parse.js";
 import moment from 'moment';
 
 export default async function generateCdvFromPdf(fileName, logFileName) {
@@ -10,7 +10,7 @@ export default async function generateCdvFromPdf(fileName, logFileName) {
         const options = {
             pagerender: render_page
         }
-        const data = await PdfParse(dataBuffer, options);
+        const data = await PDF(dataBuffer, options);
         const textInArray = processPdfData(data.text);
 
         fs.writeFileSync(`./output/${rawfileName}.csv`, textInArray.join('\n'));
